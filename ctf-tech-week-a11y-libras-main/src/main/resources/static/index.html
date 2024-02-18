@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teic Gra </title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <main>
+        <h1>TEIC GRA</h1>
+        <img src="img/logo.png" alt="" width="50px"/>
+
+        <h1>Transformando restrições em possibilidades</h1>
+        <h3>Nossa aposta de 2024 : App de acessibilidade em libras com Machine Learning e Java, baseado em software livre</h3>
+        <button id="startStopButton">Iniciar Gravação</button>
+        <audio id="audioPlayer" controls autoplay></audio>
+        <button id="transcribeButton" disabled>Transcrever Áudio</button>
+        <p id="transcriptText"></p>
+    </main>
+
+    <script src="./js/audio-recorder.model.js"></script>
+    <script src="./js/main.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
